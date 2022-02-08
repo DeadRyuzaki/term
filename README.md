@@ -48,5 +48,6 @@ throught another file. )
 ##### Ways to use it.
 #
 Adding a directory after any of the arguments above will make the path of all the terminals be set to it.
+
 ex:  ``` temp -r /home/user/projects/ ```
 
