@@ -1,0 +1,80 @@
+#!/bin/bash
+COMMAND=$1
+DIRECTORY=$2
+DIRECTORY2=$(pwd)
+
+# in the --geometry command the first value is equivalent to the width of the   
+# terminal, the second is equivalent to the height of the terminal, the third   
+# is equivalent to the y axis horizontal position relative to the screen, and   
+# the fourth is equivalent to the x axis vertial position relative to the screen
+
+
+#right (2)
+if [[ $COMMAND = 'right' ]] || [[ $COMMAND = 'r' ]]; then
+	gnome-terminal --geometry 125x30+970+35 && 
+	gnome-terminal --geometry 125x30+970+525
+
+#left (2)
+elif [[ $COMMAND = 'left' ]]  || [[ $COMMAND = 'l' ]]; then
+	gnome-terminal --geometry 125x30+70+35 &&
+	gnome-terminal --geometry 125x30+70+525
+
+#top (2)
+elif [[ $COMMAND = 'top' ]] || [[ $COMMAND = 't' ]]; then
+	gnome-terminal --geometry 125x30+970+35 &&
+	gnome-terminal --geometry 125x30+70+35
+
+#bottom (2)
+elif [[ $COMMAND = 'bottom' ]] || [[ $COMMAND = 'b' ]]; then
+	gnome-terminal --geometry 125x30+970+525 &&
+	gnome-terminal --geometry 125x30+70+525
+
+#here are the options to open only one terminal, in a specific place top, right, bottom or left
+#
+#
+#top-left
+elif [[ $COMMAND = 'topleft' ]]  || [[ $COMMAND = 'tl' ]]; then
+	gnome-terminal --geometry 125x30+70+35
+
+
+#bottom-left
+elif [[ $COMMAND = 'botleft' ]]  || [[ $COMMAND = 'bl' ]]; then
+	gnome-terminal --geometry 125x30+70+525
+
+#top-right
+elif [[ $COMMAND = 'topright' ]]  || [[ $COMMAND = 'tr' ]]; then
+	gnome-terminal --geometry 125x30+970+35
+
+
+#bottom-right
+elif [[ $COMMAND = 'botright' ]]  || [[ $COMMAND = 'br' ]]; then
+	gnome-terminal --geometry 125x30+970+525
+
+#make the option to three terminal windows                                      
+elif [[ $COMMAND = '3' ]] || [[ $COMMAND = 'three' ]]; then
+	gnome-terminal --geometry 125x30+70+35  &&     
+	gnome-terminal --geometry 125x63+970+35  &&    
+	gnome-terminal --geometry 125x30+70+535 
+
+
+elif [[ $COMMAND = '-d' ]]; then	
+	gnome-terminal --geometry 125x30+70+35 --working-directory=$DIRECTORY && 
+	gnome-terminal --geometry 125x30+970+35 --working-directory=$DIRECTORY && 
+	gnome-terminal --geometry 125x30+70+525 --working-directory=$DIRECTORY && 
+	gnome-terminal --geometry 125x30+970+525 --working-directory=$DIRECTORY 
+
+
+elif [[ $COMMAND = '-n' ]] || [[ $COMMAND = 'netflix' ]]; then
+	gnome-terminal --geometry 125x30+70+35  && 
+	gnome-terminal --geometry 125x30+970+35  && 
+	gnome-terminal --geometry 125x30+70+525  && 
+	# open netflix through and html file
+	chromium --new-window /usr/local/sbin/term_js.html
+	
+
+else 
+	gnome-terminal --geometry 125x30+70+35 && 
+	gnome-terminal --geometry 125x30+970+35 && 
+	gnome-terminal --geometry 125x30+70+525 &&
+	gnome-terminal --geometry 125x30+970+525
+fi
