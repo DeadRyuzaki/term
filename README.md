@@ -15,35 +15,43 @@ Use command term alone to open four terminal windows with the size of 115 by 35,
    ###### term = Open four terminal windows evenly distributed by the screen, any of the following commands can be used alongside the term command.
    ###
 ```bash
--r / r / right = Opens two terminals on the right side of the screen.
+Usage: term [OPTION]... [DIRECTORY]...
 
--l / l / left = Opens two terminals on the left side of the screen.
+Open terminal windows evenly distributed on the screen.
 
--t / t / top = Opens two terminals on the top side of the screen.
+   -r, --right             Opens two terminals on the right side of the screen.
 
--b / b / bottom = Opens two terminals on the bottom side of the screen.
+   -l, --left              Opens two terminals on the left side of the screen.
 
--tr / tr / topright = Open one terminal on the top right corner of the screen.
+   -t, --top               Opens two terminals on the top side of the screen.
 
--tl / tl / topleft = Open one terminal on the top left corner of the screen.
+   -b, --bottom            Opens two terminals on the bottom side of the screen.
 
--br / br / botright = Open one terminal on the bottom right corner of the screen.
+   -tr, --topright         Open one terminal on the top right corner of the screen.
 
--bl / bl / botleft = Open one terminal on the bottom left corner of the screen.
+   -tl, --toplefti         Open one terminal on the top left corner of the screen.
 
--3r / 3r / threeright = Open three terminals one big on the right side of
-the screen and two small ones on the left.
+   -br, --botrighti        Open one terminal on the bottom right corner of the screen.
 
--3l / 3l / threeleft = Open three terminals one big on the left side of
-the screen and two small ones on the right.
+   -bl, --botleft          Open one terminal on the bottom left corner of the screen.
 
--d / d / --directory = Open four terminals just as in term command but also
-needs to pass the directory as an argument.
+   -3r, --threeright       Open three terminals one big on the right side of
+                           the screen and two small ones on the left.
 
--n / n / netflix = Open three normal size terminals and an extra tab for
-"enternteinment". 
-( which by now is opening "https://netflix.com/browse" but will also be configurable
-throught another file. )
+   -3l, --threeleft        Open three terminals one big on the left side of
+                           the screen and two small ones on the right.
+
+   -d, --directory         Open four terminals just as in term command but also
+                           needs to pass the directory as an argument.
+
+   -n, --netflix           Open three normal size terminals and an extra tab for
+                           "enternteinment" with netflix. 
+
+       --help              Display this help and exit.
+    
+       --version           Output the program version. 
+
+
 ```
 ##### Ways to use it.
 #
