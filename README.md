@@ -5,15 +5,20 @@ An easy way to start your linux coding routine.
 I'll work on a way to make it available to more monitor sizes as I improve the code.
 
 
-#### Use ``` sudo ./install.sh to start. ```
-
 Use command term alone to open four terminal windows with the standard size 
 of 115 by 35, later it will be changed to be able to keep the user's 
 configuration in a file.
 
+# Installation
+
+```bash 
+
+sudo ./install.sh 
+
+```
 
 # Commands
-###### term = Open four terminal windows evenly distributed by the screen, any of the following commands can be used alongside the term command.
+###### term alone open four terminal windows evenly distributed by the screen, any of the following commands can be used alongside the term command.
 #
 
 ```bash
