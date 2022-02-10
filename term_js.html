@@ -5,9 +5,20 @@
 
 	<script>
 		function openNetflix(){
-			window.open('https://www.netflix.com/', '','options=yes, toolbar=0,titlebar=1, menubar=1, width=890, height=422, top=525, left=970')
+         
+         let params = (new URL(document.location)).searchParams;
+         let param_1 = params.get('param_1');
 
-		close()
+         if (param_1){ 
+            var base_url = param_1.toString()
+         }else{
+            var base_url = 'https://www.netflix.com/'  
+         }
+
+         console.log(base_url)
+
+			window.open(base_url, '','options=yes, toolbar=0,titlebar=1, menubar=1, width=890, height=422, top=525, left=970')
+		   close()
 		}
 	</script>
 </html>

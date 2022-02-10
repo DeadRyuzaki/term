@@ -9,6 +9,7 @@
 # Setting up argument variables
 
 COMMAND=$1
+URL=$3
 
 if [[ $# == 2 ]]; then
    DIRECTORY=$2
@@ -119,13 +120,49 @@ elif [[ $COMMAND = '-d' ]] || [[ $COMMAND = 'd' ]] || [[ $COMMAND = '--directory
 	gnome-terminal --geometry 125x30+970+525 --working-directory=$DIRECTORY 
 
 
-elif [[ $COMMAND = 'n' ]] || [[ $COMMAND = '-n' ]] || [[ $COMMAND = 'netflix' ]]; then
+elif [[ $COMMAND = '-n' ]] || [[ $COMMAND = 'netflix' ]]; then
 	gnome-terminal --geometry 125x30+70+35  --working-directory=$DIRECTORY &&  
 	gnome-terminal --geometry 125x30+970+35  --working-directory=$DIRECTORY &&  
 	gnome-terminal --geometry 125x30+70+525  --working-directory=$DIRECTORY &&  
 	# open netflix through and html file
 	chromium --new-window /usr/local/sbin/term_js.html
-	
+#   chromium --new-window /usr/local/sbin/term_js.html?param_1=$URL
+
+
+elif [[ $COMMAND = '-n1' ]] || [[ $COMMAND = 'netflix1' ]]; then
+	gnome-terminal --geometry 125x30+70+35  --working-directory=$DIRECTORY &&  
+	gnome-terminal --geometry 125x30+970+35  --working-directory=$DIRECTORY &&  
+	gnome-terminal --geometry 125x30+70+525  --working-directory=$DIRECTORY &&  
+	# open netflix through and html file
+	chromium --new-window /usr/local/sbin/term_js.html
+#   chromium --new-window /usr/local/sbin/term_js.html?param_1=$URL
+
+
+elif [[ $COMMAND = '-n2' ]] || [[ $COMMAND = 'netflix2' ]]; then
+	gnome-terminal --geometry 125x30+70+35  --working-directory=$DIRECTORY &&  
+	gnome-terminal --geometry 125x30+970+35  --working-directory=$DIRECTORY &&  
+	gnome-terminal --geometry 125x30+70+525  --working-directory=$DIRECTORY &&  
+	# open netflix through and html file
+	chromium --new-window /usr/local/sbin/term_js.html
+#   chromium --new-window /usr/local/sbin/term_js.html?param_1=$URL
+
+
+elif [[ $COMMAND = '-n3' ]] || [[ $COMMAND = 'netflix3' ]]; then
+	gnome-terminal --geometry 125x30+70+35  --working-directory=$DIRECTORY &&  
+	gnome-terminal --geometry 125x30+970+35  --working-directory=$DIRECTORY &&  
+	gnome-terminal --geometry 125x30+70+525  --working-directory=$DIRECTORY &&  
+	# open netflix through and html file
+	chromium --new-window /usr/local/sbin/term_js.html
+#   chromium --new-window /usr/local/sbin/term_js.html?param_1=$URL
+
+elif [[ $COMMAND = '-n4' ]] || [[ $COMMAND = 'netflix4' ]]; then
+	gnome-terminal --geometry 125x30+70+35  --working-directory=$DIRECTORY &&  
+	gnome-terminal --geometry 125x30+970+35  --working-directory=$DIRECTORY &&  
+	gnome-terminal --geometry 125x30+70+525  --working-directory=$DIRECTORY &&  
+	# open netflix through and html file
+	chromium --new-window /usr/local/sbin/term_js.html
+#   chromium --new-window /usr/local/sbin/term_js.html?param_1=$URL
+
 
 else 
 	gnome-terminal --geometry 125x30+70+35 --working-directory=$DIRECTORY &&  

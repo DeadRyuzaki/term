@@ -9,7 +9,7 @@ Use command term alone to open four terminal windows with the standard size
 of 115 by 35, later it will be changed to be able to keep the user's 
 configuration in a file.
 
-# Installation
+## Installation
 
 ```bash 
 
@@ -17,7 +17,7 @@ sudo ./install.sh
 
 ```
 
-# Commands
+## Commands
 ###### term alone open four terminal windows evenly distributed by the screen, any of the following commands can be used alongside the term command.
 #
 
