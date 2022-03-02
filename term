@@ -107,10 +107,15 @@ elif [[ $COMMAND = 'botright' ]]  || [[ $COMMAND = 'br' ]] || [[ $COMMAND = '-br
 	gnome-terminal --geometry 125x30+970+525 --working-directory=$DIRECTORY  
 
 #make the option to three terminal windows                                      
-elif [[ $COMMAND = '3' ]] || [[ $COMMAND = 'three' ]] || [[ $COMMAND = '-3' ]]; then
+elif [[ $COMMAND = '-3r' ]] || [[ $COMMAND = '--threeright' ]]; then
 	gnome-terminal --geometry 125x30+70+35  --working-directory=$DIRECTORY &&     
 	gnome-terminal --geometry 125x63+970+35  --working-directory=$DIRECTORY &&  
 	gnome-terminal --geometry 125x30+70+535 --working-directory=$DIRECTORY 
+
+elif [[ $COMMAND = '-3l' ]] || [[ $COMMAND = '--threeleft' ]]; then
+	gnome-terminal --geometry 125x30+970+35  --working-directory=$DIRECTORY &&     
+	gnome-terminal --geometry 125x63+70+35  --working-directory=$DIRECTORY &&  
+	gnome-terminal --geometry 125x30+970+535 --working-directory=$DIRECTORY 
 
 
 elif [[ $COMMAND = '-d' ]] || [[ $COMMAND = 'd' ]] || [[ $COMMAND = '--directory' ]]; then	
