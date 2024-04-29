@@ -36,7 +36,7 @@ Open terminal windows evenly distributed on the screen.
 
    -tl, --toplefti         Open one terminal on the top left corner of the screen.
 
-   -br, --botrighti        Open one terminal on the bottom right corner of the screen.
+   -br, --botright         Open one terminal on the bottom right corner of the screen.
 
    -bl, --botleft          Open one terminal on the bottom left corner of the screen.
 
